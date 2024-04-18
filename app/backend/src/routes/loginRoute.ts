@@ -13,7 +13,7 @@ router.post('/', loginValid, (req: Request, res: Response) => loginController.lo
 router.get(
   '/role',
   authMiddleware.authenticate,
-  (req: Request, res: Response) => LoginController.returnRole(req as IRequestWithUser, res),
+  (req: Request, res: Response) => LoginController.returnUserRole(req as IRequestWithUser, res),
 );
 
 export default router;
